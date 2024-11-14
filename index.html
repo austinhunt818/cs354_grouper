@@ -65,6 +65,36 @@
       h3 {
         color: #b8001f;
       }
+      pre {
+        border-radius: 5px;
+        background-color: #282c34;
+      }
+      code {
+        color: #bababa;
+        font-size: 16px;
+      }
+      .comment {
+        color: #676f7d;
+      }
+      .function {
+        color: #88c273;
+      }
+      .parameter {
+        color: #ff9d3d;
+        font-style: italic;
+      }
+      .keyword {
+        color: #f95454;
+      }
+      .boolean {
+        color: #77cdff;
+      }
+      .integer {
+        color: #7e60bf;
+      }
+      .string {
+        color: #e5c07b;
+      }
     </style>
   </head>
   <body>
@@ -113,16 +143,16 @@
       <section id="history">
         <h2>History</h2>
         <p>
-          Ruby was born on February 24th, 1993, as that was the day that creator Yukihiro Matsumoto, 
+          Ruby was born on February 24th, 1993, as that was the day that creator Yukihiro Matsumoto,
           otherwise referred to as Matz, picked the name Ruby. Matsumoto wanted to design a language
           that combined aspects of his favorite languages, including Perl, Smalltalk, Eiffel and Ada.
           Ruby 0.95 was the first public release, coming out in 1995. For about a decade, the language
           was only really popular in Japan. That changed in 2004, when David Heinemeier Hansson introduced
           Ruby on Rails, a web development framework. Rails became very popular for web development throughout
-          the 2000's, leveraging the expressiveness of Ruby to make web development more intuitive for developers. 
+          the 2000's, leveraging the expressiveness of Ruby to make web development more intuitive for developers.
           By 2016, ruby was the 8th most popular programming language.
         </p>
-        <p>  
+        <p>
           Currently, Ruby's popularity is so-so. With the ever evolving world of web development, Rails
           became less popular for new web apps, and so therefore did Ruby. However, Ruby is still relevant.
           Rails may be less popular than more recent frameworks, but it is still used widely, and is still one
@@ -194,6 +224,37 @@
           delectus quos! Alias, odit mollitia! Iure enim odio sit ab alias omnis
           doloremque quia error possimus.
         </p>
+        <article class="example">
+          <h3>Example 1. Bubble Sort</h3>
+          <pre>
+            <code>
+  <span class="keyword">def</span> <span class="function">bubble_sort</span>(<span class="parameter">array</span>)
+      n <span class="keyword">=</span> array.length
+      <span class="keyword">loop do</span>
+        swapped = <span class="boolean">false</span>
+        <span class="comment"># Iterate from 0 to n-2</span>
+        (<span class="integer">1</span>...n).each <span class="keyword">do</span> |i|
+          <span class="comment"># Compare the current element with the previous one</span>
+          <span class="keyword">if</span> array[i <span class="keyword">-</span> <span class="integer">1</span>] <span class="keyword">></span> array[i]
+            <span class="comment"># Swap the elements</span>
+            array[i <span class="keyword">-</span> 1], array[i] <span class="keyword">=</span> array[i], array[i <span class="keyword">-</span> <span class="integer">1</span>]
+            swapped <span class="keyword">=</span> <span class="boolean">true</span>
+          <span class="keyword">end</span>
+        <span class="keyword">end</span>
+        <span class="comment"># Break the loop if no elements were swapped</span>
+        <span class="keyword">break</span> <span class="keyword">unless</span> swapped
+      <span class="keyword">end</span>
+      <span class="comment"># Return sorted array</span>
+      array
+    <span class="keyword">end</span>
+    <span class="comment"># Example usage:</span>
+    arr <span class="keyword">=</span> [<span class="integer">5</span>, <span class="integer">3</span>, <span class="integer">8</span>, <span class="integer">4</span>, <span class="integer">2</span>]
+    <span class="function">puts</span> <span class="string">"Original array:</span> <span class="integer">#{</span><span class="string">arr</span><span class="integer">}</span><span class="string">"</span>
+    sorted_arr <span class="keyword">=</span> bubble_sort(arr)
+    <span class="function">puts</span> <span class="string">"Sorted array:</span> <span class="integer">#{</span><span class="string">sorted_arr</span><span class="integer">}</span><span class="string">"</span>
+            </code>
+          </pre>
+        </article>
       </section>
     </main>
     <footer>
