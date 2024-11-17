@@ -29,6 +29,9 @@ body {
   header {
     margin: 0;
   }
+  .header-title{
+    margin: 15px 0;
+  }
 
   nav,
   section,
@@ -119,6 +122,7 @@ body {
   pre {
     border-radius: 5px;
     background-color: #282c34;
+    display: flex;
   }
 
   code {
@@ -155,3 +159,18 @@ body {
     color: #e5c07b;
   }
   
+  
+  figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    padding: 0;
+    margin: 0;
+    float: right;
+  }
+  figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
