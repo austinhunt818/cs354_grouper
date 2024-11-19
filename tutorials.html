@@ -72,6 +72,45 @@
           </code>
         </pre>
       </article>
+      
+      <article class="example">
+        <h3>Example 2. Classes</h3>
+        <pre>
+          <code>
+  <span class="comment"># Base class representing a general greeter</span>
+  <span class="keyword">class</span> <span class="className">Greeter</span>
+      <span class="comment"># Constructor method: Called when a new instance of the class is created</span>
+      <span class="comment"># Initializes the greeter with a name</span>
+      <span class="keyword">def</span> <span class="function">initialize</span>(<span class="parameter">name</span>)
+        <span class="className">@name</span> = name  <span class="comment"># Instance variable to store the name</span>
+      <span class="keyword">end</span>
+    
+      <span class="comment"># Method to greet using the name</span>
+      <span class="keyword">def</span> <span class="function">greet</span>
+        <span class="function">puts</span> <span class="string">"Hello, #{</span><span class="className">@name</span><span class="string">}!"</span>  <span class="comment"># Output a general greeting message</span>
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    
+    <span class="comment"># Subclass of Greeter specifically for Walmart greeters</span>
+    <span class="keyword">class</span> <span class="className">WalmartGreeter</span> < <span class="function">Greeter</span>
+      <span class="comment"># Additional method for Walmart-specific greeting</span>
+      <span class="keyword">def</span> <span class="function">store_greet</span>
+        <span class="comment"># Output a store-specific greeting message</span>
+        <span class="function">puts</span> <span class="string">"Hello, #{</span><span class="className">@name</span><span class="string">}, welcome to Walmart!"</span>
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    
+    <span class="comment"># Creating an instance of the Greeter class</span>
+    greeter = <span class="className">Greeter</span>.<span class="keyword">new</span>(<span class="string">"Ruby"</span>)
+    greeter.greet  
+    
+    <span class="comment"># Creating an instance of the WalmartGreeter subclass</span>
+    walmart_greeter = <span class="className">WalmartGreeter</span>.<span class="keyword">new</span>(<span class="string">"Matz"</span>)  
+    walmart_greeter.greet 
+    walmart_greeter.store_greet 
+          </code>
+        </pre>
+      </article>
     </section>
 
 
