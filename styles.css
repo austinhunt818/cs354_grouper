@@ -148,7 +148,7 @@ body {
   }
 
   .boolean {
-    color: #77cdff;
+    color: #219B9D;
   }
 
   .integer {
@@ -157,6 +157,9 @@ body {
 
   .string {
     color: #e5c07b;
+  }
+  .className{
+    color: #7AB2D3;
   }
   
   
