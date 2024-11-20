@@ -37,13 +37,13 @@
         </p>
         <pre>
           <code>
-            <span class="comment"># Numbers and strings are objects</span>
-            <span class="function">puts</span> <span class="integer">5</span>.<span class="function">class</span>       <span class="comment"># Output: Integer</span>
-            <span class="function">puts</span> <span class="string">"Hello"</span>.<span class="function">class</span> <span class="comment"># Output: String</span>
+  <span class="comment"># Numbers and strings are objects</span>
+  <span class="function">puts</span> <span class="integer">5</span>.<span class="function">class</span>       <span class="comment"># Output: Integer</span>
+  <span class="function">puts</span> <span class="string">"Hello"</span>.<span class="function">class</span> <span class="comment"># Output: String</span>
 
-            <span class="comment"># Methods can be called on them</span>
-            <span class="function">puts</span> <span class="integer">5</span>.<span class="function">even?</span>       <span class="comment"># Output: false</span>
-            <span class="function">puts</span> <span class="string">"hello"</span>.<span class="function">upcase</span> <span class="comment"># Output: HELLO</span>
+  <span class="comment"># Methods can be called on them</span>
+  <span class="function">puts</span> <span class="integer">5</span>.<span class="function">even?</span>       <span class="comment"># Output: false</span>
+  <span class="function">puts</span> <span class="string">"hello"</span>.<span class="function">upcase</span> <span class="comment"># Output: HELLO</span>
           </code>
         </pre>
         <h3>Simple and Readable Syntax</h3>
@@ -54,14 +54,14 @@
         </p>
         <pre>
           <code>
-            <span class="comment"># Simple and natural</span>
-            <span class="parameter">name</span> <span class="keyword">=</span> <span class="string">"Ruby"</span>
-            <span class="function">puts</span> <span class="string">"Hello, #{</span><span class="parameter">name</span><span class="string">}!"</span>  <span class="comment"># Output: Hello, Ruby!</span>
+  <span class="comment"># Simple and natural</span>
+  <span class="parameter">name</span> <span class="keyword">=</span> <span class="string">"Ruby"</span>
+  <span class="function">puts</span> <span class="string">"Hello, #{</span><span class="parameter">name</span><span class="string">}!"</span>  <span class="comment"># Output: Hello, Ruby!</span>
 
-            <span class="comment"># Control structures</span>
-            <span class="keyword">if</span> <span class="parameter">name</span> <span class="keyword">==</span> <span class="string">"Ruby"</span>
-              <span class="function">puts</span> <span class="string">"You're learning #{</span><span class="parameter">name</span><span class="string">}!"</span> <span class="comment"># Output: You're learning Ruby!</span>
-            <span class="keyword">end</span>
+  <span class="comment"># Control structures</span>
+  <span class="keyword">if</span> <span class="parameter">name</span> <span class="keyword">==</span> <span class="string">"Ruby"</span>
+    <span class="function">puts</span> <span class="string">"You're learning #{</span><span class="parameter">name</span><span class="string">}!"</span> <span class="comment"># Output: You're learning Ruby!</span>
+  <span class="keyword">end</span>
           </code>
         </pre>
         <h3>Dynamically and Strongly Typed</h3>
@@ -74,19 +74,19 @@
         </p>
         <pre>
           <code>
-            <span class="keyword">def</span> <span class="function">quack</span>(<span class="parameter">animal</span>)
-              <span class="keyword">if</span> <span class="parameter">animal</span>.<span class="function">respond_to?</span>(<span class="string">:quack</span>)
-                <span class="parameter">animal</span>.<span class="function">quack</span>
-              <span class="keyword">end</span>
-            <span class="keyword">end</span>
+  <span class="keyword">def</span> <span class="function">quack</span>(<span class="parameter">animal</span>)
+    <span class="keyword">if</span> <span class="parameter">animal</span>.<span class="function">respond_to?</span>(<span class="string">:quack</span>)
+      <span class="parameter">animal</span>.<span class="function">quack</span>
+    <span class="keyword">end</span>
+  <span class="keyword">end</span>
 
-            <span class="keyword">class</span> <span class="className">Duck</span>
-              <span class="keyword">def</span> <span class="function">quack</span>
-                <span class="function">puts</span> <span class="string">"Quack!"</span>
-              <span class="keyword">end</span>
-            <span class="keyword">end</span>
+  <span class="keyword">class</span> <span class="className">Duck</span>
+    <span class="keyword">def</span> <span class="function">quack</span>
+      <span class="function">puts</span> <span class="string">"Quack!"</span>
+    <span class="keyword">end</span>
+  <span class="keyword">end</span>
 
-            <span class="function">quack</span>(<span class="className">Duck</span>.<span class="keyword">new</span>) <span class="comment"># Output: Quack!</span>
+  <span class="function">quack</span>(<span class="className">Duck</span>.<span class="keyword">new</span>) <span class="comment"># Output: Quack!</span>
           </code>
         </pre>
         <h3>Built-In Iterators and Blocks</h3>
@@ -97,18 +97,18 @@
         </p>
         <pre>
           <code>
-            <span class="comment"># Iterate over an array</span>
-            [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>].<span class="function">each</span> <span class="keyword">do</span> |<span class="parameter">num</span>|
-              <span class="function">puts</span> <span class="parameter">num</span> <span class="keyword">*</span> <span class="integer">2</span>
-            <span class="keyword">end</span>
-            <span class="comment"># Output:</span>
-            <span class="comment"># 2</span>
-            <span class="comment"># 4</span>
-            <span class="comment"># 6</span>
+  <span class="comment"># Iterate over an array</span>
+  [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>].<span class="function">each</span> <span class="keyword">do</span> |<span class="parameter">num</span>|
+    <span class="function">puts</span> <span class="parameter">num</span> <span class="keyword">*</span> <span class="integer">2</span>
+  <span class="keyword">end</span>
+  <span class="comment"># Output:</span>
+  <span class="comment"># 2</span>
+  <span class="comment"># 4</span>
+  <span class="comment"># 6</span>
 
-            <span class="comment"># Map to transform an array</span>
-            <span class="parameter">squared</span> <span class="keyword">=</span> [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>].<span class="function">map</span> { |<span class="parameter">num</span>| <span class="parameter">num</span> <span class="keyword">**</span> <span class="integer">2</span> }
-            <span class="function">puts</span> <span class="parameter">squared</span>.<span class="function">inspect</span>  <span class="comment"># Output: [1, 4, 9]</span>
+  <span class="comment"># Map to transform an array</span>
+  <span class="parameter">squared</span> <span class="keyword">=</span> [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>].<span class="function">map</span> { |<span class="parameter">num</span>| <span class="parameter">num</span> <span class="keyword">**</span> <span class="integer">2</span> }
+  <span class="function">puts</span> <span class="parameter">squared</span>.<span class="function">inspect</span>  <span class="comment"># Output: [1, 4, 9]</span>
           </code>
         </pre>
         <h3>Metaprogramming</h3>
@@ -119,23 +119,23 @@
         </p>
         <pre>
           <code>
-            <span class="keyword">class</span> <span class="className">Person</span>
-              <span class="keyword">attr_accessor</span> :<span class="parameter">name</span>
+  <span class="keyword">class</span> <span class="className">Person</span>
+    <span class="keyword">attr_accessor</span> :<span class="parameter">name</span>
 
-              <span class="keyword">def</span> <span class="function">initialize</span>(<span class="parameter">name</span>)
-                <span class="className">@name</span> <span class="keyword">=</span> <span class="parameter">name</span>
-              <span class="keyword">end</span>
+    <span class="keyword">def</span> <span class="function">initialize</span>(<span class="parameter">name</span>)
+      <span class="className">@name</span> <span class="keyword">=</span> <span class="parameter">name</span>
+    <span class="keyword">end</span>
 
-              <span class="keyword">def</span> <span class="function">self.add_greeting</span>(<span class="parameter">greeting</span>)
-                <span class="function">define_method</span>(<span class="parameter">greeting</span>) <span class="keyword">do</span>
-                  <span class="function">puts</span> <span class="string">"#{</span><span class="parameter">greeting</span>.<span class="function">capitalize</span><span class="string">}, #{</span><span class="className">@name</span><span class="string">}!"</span>
-                <span class="keyword">end</span>
-              <span class="keyword">end</span>
-            <span class="keyword">end</span>
+    <span class="keyword">def</span> <span class="function">self.add_greeting</span>(<span class="parameter">greeting</span>)
+      <span class="function">define_method</span>(<span class="parameter">greeting</span>) <span class="keyword">do</span>
+        <span class="function">puts</span> <span class="string">"#{</span><span class="parameter">greeting</span>.<span class="function">capitalize</span><span class="string">}, #{</span><span class="className">@name</span><span class="string">}!"</span>
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+  <span class="keyword">end</span>
 
-            <span class="className">Person</span>.<span class="function">add_greeting</span>(<span class="string">:hello</span>)
-            <span class="parameter">person</span> <span class="keyword">=</span> <span class="className">Person</span>.<span class="keyword">new</span>(<span class="string">"Bob"</span>)
-            <span class="parameter">person</span>.<span class="function">hello</span>  <span class="comment"># Output: Hello, Bob!</span>
+  <span class="className">Person</span>.<span class="function">add_greeting</span>(<span class="string">:hello</span>)
+  <span class="parameter">person</span> <span class="keyword">=</span> <span class="className">Person</span>.<span class="keyword">new</span>(<span class="string">"Bob"</span>)
+  <span class="parameter">person</span>.<span class="function">hello</span>  <span class="comment"># Output: Hello, Bob!</span>
           </code>
         </pre>
 
@@ -161,13 +161,13 @@
         </p>
         <pre>
           <code>
-            <span class="keyword">begin</span>
-              <span class="integer">10</span> <span class="keyword">/</span> <span class="integer">0</span>
-            <span class="keyword">rescue</span> <span class="className">ZeroDivisionError</span> <span class="keyword">=></span> <span class="parameter">e</span>
-              <span class="function">puts</span> <span class="string">"Error: #{</span><span class="parameter">e</span>.<span class="function">message</span><span class="string">}"</span>  <span class="comment"># Output: Error: divided by 0</span>
-            <span class="keyword">ensure</span>
-              <span class="function">puts</span> <span class="string">"This always runs."</span>
-            <span class="keyword">end</span>
+  <span class="keyword">begin</span>
+    <span class="integer">10</span> <span class="keyword">/</span> <span class="integer">0</span>
+  <span class="keyword">rescue</span> <span class="className">ZeroDivisionError</span> <span class="keyword">=></span> <span class="parameter">e</span>
+    <span class="function">puts</span> <span class="string">"Error: #{</span><span class="parameter">e</span>.<span class="function">message</span><span class="string">}"</span>  <span class="comment"># Output: Error: divided by 0</span>
+  <span class="keyword">ensure</span>
+    <span class="function">puts</span> <span class="string">"This always runs."</span>
+  <span class="keyword">end</span>
           </code>
         </pre>
 
@@ -190,38 +190,111 @@
         </p>
         <pre>
           <code>
-            <span class="comment"># 1. Create a new Rails application</span>
-            <span class="command">rails new my_rails_app</span>
-            
-            <span class="comment"># Navigate into the application directory</span>
-            <span class="command">cd my_rails_app</span>
+  <span class="comment"># 1. Create a new Rails application</span>
+  <span class="command">rails new my_rails_app</span>
+  
+  <span class="comment"># Navigate into the application directory</span>
+  <span class="command">cd my_rails_app</span>
 
-            <span class="comment"># 2. Run the Rails server to check the app (default port: 3000)</span>
-            <span class="command">rails server</span>
-            
-            <span class="comment"># Access the app in your browser: http://localhost:3000</span>
-            
-            <span class="comment"># Stop the server (Ctrl+C) before generating resources</span>
+  <span class="comment"># 2. Run the Rails server to check the app (default port: 3000)</span>
+  <span class="command">rails server</span>
+  
+  <span class="comment"># Access the app in your browser: http://localhost:3000</span>
+  
+  <span class="comment"># Stop the server (Ctrl+C) before generating resources</span>
 
-            <span class="comment"># 3. Generate a scaffold for an Article resource</span>
-            <span class="command">rails generate scaffold Article title:string body:text</span>
+  <span class="comment"># 3. Generate a scaffold for an Article resource</span>
+  <span class="command">rails generate scaffold Article title:string body:text</span>
 
-            <span class="comment"># This will create:</span>
-            <span class="comment"># - Model (app/models/article.rb)</span>
-            <span class="comment"># - Controller (app/controllers/articles_controller.rb)</span>
-            <span class="comment"># - Views (app/views/articles/)</span>
-            <span class="comment"># - Database migration (db/migrate/TIMESTAMP_create_articles.rb)</span>
-            <span class="comment"># - Routes (config/routes.rb)</span>
+  <span class="comment"># This will create:</span>
+  <span class="comment"># - Model (app/models/article.rb)</span>
+  <span class="comment"># - Controller (app/controllers/articles_controller.rb)</span>
+  <span class="comment"># - Views (app/views/articles/)</span>
+  <span class="comment"># - Database migration (db/migrate/TIMESTAMP_create_articles.rb)</span>
+  <span class="comment"># - Routes (config/routes.rb)</span>
 
-            <span class="comment"># 4. Apply database migrations to update the schema</span>
-            <span class="command">rails db:migrate</span>
+  <span class="comment"># 4. Apply database migrations to update the schema</span>
+  <span class="command">rails db:migrate</span>
 
-            <span class="comment"># 5. Start the Rails server again</span>
-            <span class="command">rails server</span>
+  <span class="comment"># 5. Start the Rails server again</span>
+  <span class="command">rails server</span>
 
-            <span class="comment"># Visit the Articles resource at http://localhost:3000/articles</span>
+  <span class="comment"># Visit the Articles resource at http://localhost:3000/articles</span>
           </code>
         </pre>
+        <article>
+          <h3>Compared with other languages</h3>
+          <table border="1" cellspacing="0" cellpadding="10" >
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Ruby</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>C</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Syntax Style</strong></td>
+                <td>Concise, flexible, and readable</td>
+                <td>Verbose and strictly structured</td>
+                <td>Clean and readable</td>
+                <td>Low-level, manual, and strict</td>
+              </tr>
+              <tr>
+                <td><strong>Typing</strong></td>
+                <td>Dynamic typing</td>
+                <td>Static typing</td>
+                <td>Dynamic typing</td>
+                <td>Static typing</td>
+              </tr>
+              <tr>
+                <td><strong>Object Orientation</strong></td>
+                <td>Purely object-oriented (everything is an object)</td>
+                <td>Object-oriented but with primitives</td>
+                <td>Multi-paradigm; everything is an object</td>
+                <td>Not object-oriented</td>
+              </tr>
+              <tr>
+                <td><strong>Ease of Learning</strong></td>
+                <td>Easy to learn with friendly syntax</td>
+                <td>Steeper learning curve for beginners</td>
+                <td>Beginner-friendly and widely used</td>
+                <td>Difficult for beginners</td>
+              </tr>
+              <tr>
+                <td><strong>Main Use Cases</strong></td>
+                <td>Web development, automation</td>
+                <td>Enterprise applications, Android development</td>
+                <td>Web development, data science, machine learning</td>
+                <td>System programming, embedded systems</td>
+              </tr>
+              <tr>
+                <td><strong>Performance</strong></td>
+                <td>Slower due to interpreted nature</td>
+                <td>Faster due to JVM optimizations</td>
+                <td>Similar to Ruby, often slower</td>
+                <td>Very fast, close to hardware</td>
+              </tr>
+              <tr>
+                <td><strong>Code Execution</strong></td>
+                <td>Interpreted</td>
+                <td>Compiled to bytecode and run on JVM</td>
+                <td>Interpreted</td>
+                <td>Compiled to machine code</td>
+              </tr>
+              <tr>
+                <td><strong>Error Handling</strong></td>
+                <td>Exception-based</td>
+                <td>Exception-based</td>
+                <td>Exception-based</td>
+                <td>Manual error handling (e.g., return codes)</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </article>
       </section>
 
 

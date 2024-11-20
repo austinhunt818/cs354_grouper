@@ -177,3 +177,12 @@ body {
     height: auto;
     display: block;
   }
+  table{
+    border-collapse: collapse; 
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+  }
+  thead{
+    background-color: #FEF2F4;
+  }
