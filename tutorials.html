@@ -22,6 +22,7 @@
     <li class="redir"><a href="installation.html">Installation</a></li>
     <li class="redir"><a href="features.html">Features</a></li>
     <li class="redir"><a href="tutorials.html">Tutorials</a></li>
+    <li class="redir"><a href="teamprogram.html">Team Program</a></li>
   </ul>
 </header>
 
@@ -29,17 +30,16 @@
 
     <section id="tutorials">
       <h2>Tutorials</h2>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum non et
-        quia. Illo repudiandae delectus quos! Alias, odit mollitia! Iure enim
-        odio sit ab alias omnis doloremque quia error possimus.Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Cum non et quia. Illo
-        repudiandae delectus quos! Alias, odit mollitia! Iure enim odio sit ab
-        alias omnis doloremque quia error possimus. Lorem, ipsum dolor sit
-        amet consectetur adipisicing elit. Cum non et quia. Illo repudiandae
-        delectus quos! Alias, odit mollitia! Iure enim odio sit ab alias omnis
-        doloremque quia error possimus.
-      </p>
+
+      <article>
+        <h3>Running a Ruby Program</h3>
+        <p>Once ruby is install open a terminal or command prompt, navigate to the directory containing your .rb file, and use the following command</p>
+        <pre><code>
+ ruby NameOfYourFile.rb
+        </code></pre>
+        <p>This will execute the program, and you should see the output:
+          </p>
+      </article>
       <article class="example">
         <h3>Example 1. Bubble Sort</h3>
         <pre>
@@ -70,6 +70,15 @@
     <span class="function">puts</span> <span class="string">"Sorted array:</span> <span class="integer">#{</span><span class="string">sorted_arr</span><span class="integer">}</span><span class="string">"</span>
           </code>
         </pre>
+        <h4>Features Highlighted:</h4>
+        <ul>
+          <li><strong>Iterators and Ranges:</strong> The use of (1...n).each demonstrates Ruby's range and iterator functionality,
+          </li>
+          <li><strong>Dynamic Typing:</strong> Ruby dynamically determines the types of variables (like array and swapped), eliminating the need for explicit type declarations
+          </li>
+          <li><strong>Readable and Concise Syntax:</strong> Ruby's clear and syntax makes algorithms like Bubble Sort easy to implement and understand.</li>
+  
+        </ul>
       </article>
       
       <article class="example">
@@ -109,7 +118,40 @@
     walmart_greeter.store_greet 
           </code>
         </pre>
+        <h4>Features Highlighted:</h4>
+        <ul>
+          <li><strong>Object-Oriented Design:</strong> Ruby's classes and inheritance make it easy to create reusable and specialized components, as seen with Greeter and WalmartGreeter.
+          </li>
+          <li><strong>Method Overriding and Extension:</strong> The WalmartGreeter subclass extends the Greeter class and adds a new method (store_greet), demonstrating inheritance and specialization
+          </li>
+          <li><strong>Instance Variables:</strong> The use of @name showcases Ruby's instance variables, which store data specific to an object</li>
+        </ul>
       </article>
+      <article><h3>Example 3. Word Frequency Counter</h3>
+      <pre><code>
+  <span class="function">puts</span> "Enter a sentence:"
+  sentence <span class="keyword">=</span> <span class="function">gets</span>.<span class="function">chomp</span>
+
+  <span class="comment"># Split the sentence into words, normalize to lowercase, and count frequencies</span>
+  word_counts <span class="keyword">=</span> <span class="className">Hash</span>.<span class="keyword">new</span>(<span class="integer">0</span>)  <span class="comment"># Default value for missing keys is 0</span>
+  sentence.split.each { |word| word_counts[word.downcase] <span class="keyword">+=</span> <span class="integer">1</span> }
+
+  <span class="comment"># Sort and display the word counts</span>
+  <span class="function">puts</span> <span class="string">"</span><span class="boolean">\n</span><span class="string">Word Frequency:"</span>
+  word_counts.sort_by { |_word, count| <span class="keyword">-</span>count }.each <span class="keyword">do</span> |word, count|
+    <span class="string"><span class="function">puts</span> <span class="string">"</span><span class="integer">#{</span><span class="string">word</span><span class="integer">}</span>: <span class="integer">#{</span><span class="string">count</span><span class="integer">}</span>"</span>
+  <span class="keyword">end</span>
+      </code></pre>
+      <h4>Features Highlighted:</h4>
+      <ul>
+        <li><strong>Concise Syntax:</strong> Ruby's Hash.new(0) makes it easy to create a hash with default values.
+        </li>
+        <li><strong>Iterators and Blocks:</strong> The use of each and sort_by with blocks ({}) showcases Ruby's emphasis on clean, readable code.
+        </li>
+        <li><strong>Dynamic Typing:</strong> No need to declare variable types</li>
+        <li><strong>Interactive I/O:</strong> The gets method to take user input and puts for output make it beginner-friendly </li>
+      </ul>
+    </article>
     </section>
 
 
