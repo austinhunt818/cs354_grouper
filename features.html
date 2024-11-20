@@ -29,18 +29,199 @@
 
 
       <section id="comparison">
-        <h2>Characteristics and Features, Compared with other languages</h2>
+        <h2>Key Features of Ruby</h2>
+        <h3>Object-Oriented Programming</h3>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum non et
-          quia. Illo repudiandae delectus quos! Alias, odit mollitia! Iure enim
-          odio sit ab alias omnis doloremque quia error possimus.Lorem, ipsum
-          dolor sit amet consectetur adipisicing elit. Cum non et quia. Illo
-          repudiandae delectus quos! Alias, odit mollitia! Iure enim odio sit ab
-          alias omnis doloremque quia error possimus. Lorem, ipsum dolor sit
-          amet consectetur adipisicing elit. Cum non et quia. Illo repudiandae
-          delectus quos! Alias, odit mollitia! Iure enim odio sit ab alias omnis
-          doloremque quia error possimus.
+          In Ruby, everything is an object, even primitive types. This consistent 
+          design choice allows for intuitive programming and object-oriented capabilities.
         </p>
+        <pre>
+          <code>
+            <span class="comment"># Numbers and strings are objects</span>
+            <span class="function">puts</span> <span class="integer">5</span>.<span class="function">class</span>       <span class="comment"># Output: Integer</span>
+            <span class="function">puts</span> <span class="string">"Hello"</span>.<span class="function">class</span> <span class="comment"># Output: String</span>
+
+            <span class="comment"># Methods can be called on them</span>
+            <span class="function">puts</span> <span class="integer">5</span>.<span class="function">even?</span>       <span class="comment"># Output: false</span>
+            <span class="function">puts</span> <span class="string">"hello"</span>.<span class="function">upcase</span> <span class="comment"># Output: HELLO</span>
+          </code>
+        </pre>
+        <h3>Simple and Readable Syntax</h3>
+        <p>
+          Ruby's syntax is designed to be easy to read and write. It is
+          designed to be more natural and intuitive which reduces the 
+          learning curve and allows the developer to focus on solving problems.
+        </p>
+        <pre>
+          <code>
+            <span class="comment"># Simple and natural</span>
+            <span class="parameter">name</span> <span class="keyword">=</span> <span class="string">"Ruby"</span>
+            <span class="function">puts</span> <span class="string">"Hello, #{</span><span class="parameter">name</span><span class="string">}!"</span>  <span class="comment"># Output: Hello, Ruby!</span>
+
+            <span class="comment"># Control structures</span>
+            <span class="keyword">if</span> <span class="parameter">name</span> <span class="keyword">==</span> <span class="string">"Ruby"</span>
+              <span class="function">puts</span> <span class="string">"You're learning #{</span><span class="parameter">name</span><span class="string">}!"</span> <span class="comment"># Output: You're learning Ruby!</span>
+            <span class="keyword">end</span>
+          </code>
+        </pre>
+        <h3>Dynamically and Strongly Typed</h3>
+        <p>
+          Ruby is dynamically typed, which means variable types don't need to be 
+          declared. Ruby's "duck typing" references the phrase "if it walks like 
+          a duck and quacks like a duck, then it must be a duck". In simple terms, 
+          this means there is a focus on what an object can do, rather than its class, 
+          which provides more flexibility.
+        </p>
+        <pre>
+          <code>
+            <span class="keyword">def</span> <span class="function">quack</span>(<span class="parameter">animal</span>)
+              <span class="keyword">if</span> <span class="parameter">animal</span>.<span class="function">respond_to?</span>(<span class="string">:quack</span>)
+                <span class="parameter">animal</span>.<span class="function">quack</span>
+              <span class="keyword">end</span>
+            <span class="keyword">end</span>
+
+            <span class="keyword">class</span> <span class="className">Duck</span>
+              <span class="keyword">def</span> <span class="function">quack</span>
+                <span class="function">puts</span> <span class="string">"Quack!"</span>
+              <span class="keyword">end</span>
+            <span class="keyword">end</span>
+
+            <span class="function">quack</span>(<span class="className">Duck</span>.<span class="keyword">new</span>) <span class="comment"># Output: Quack!</span>
+          </code>
+        </pre>
+        <h3>Built-In Iterators and Blocks</h3>
+        <p>
+          Ruby provides tools like iterators, blocks, and enumerable methods, making 
+          it easy to work with collections. Tasks like sorting, filtering, and mapping 
+          are made easy with Ruby's syntax.
+        </p>
+        <pre>
+          <code>
+            <span class="comment"># Iterate over an array</span>
+            [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>].<span class="function">each</span> <span class="keyword">do</span> |<span class="parameter">num</span>|
+              <span class="function">puts</span> <span class="parameter">num</span> <span class="keyword">*</span> <span class="integer">2</span>
+            <span class="keyword">end</span>
+            <span class="comment"># Output:</span>
+            <span class="comment"># 2</span>
+            <span class="comment"># 4</span>
+            <span class="comment"># 6</span>
+
+            <span class="comment"># Map to transform an array</span>
+            <span class="parameter">squared</span> <span class="keyword">=</span> [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>].<span class="function">map</span> { |<span class="parameter">num</span>| <span class="parameter">num</span> <span class="keyword">**</span> <span class="integer">2</span> }
+            <span class="function">puts</span> <span class="parameter">squared</span>.<span class="function">inspect</span>  <span class="comment"># Output: [1, 4, 9]</span>
+          </code>
+        </pre>
+        <h3>Metaprogramming</h3>
+        <p>
+          Ruby allows you to write code that modifies itself, which enables the 
+          developer to use advanced techniques such as dynamic method creation. 
+          This feature is the reason why Ruby on Rails exists in its current form.
+        </p>
+        <pre>
+          <code>
+            <span class="keyword">class</span> <span class="className">Person</span>
+              <span class="keyword">attr_accessor</span> :<span class="parameter">name</span>
+
+              <span class="keyword">def</span> <span class="function">initialize</span>(<span class="parameter">name</span>)
+                <span class="className">@name</span> <span class="keyword">=</span> <span class="parameter">name</span>
+              <span class="keyword">end</span>
+
+              <span class="keyword">def</span> <span class="function">self.add_greeting</span>(<span class="parameter">greeting</span>)
+                <span class="function">define_method</span>(<span class="parameter">greeting</span>) <span class="keyword">do</span>
+                  <span class="function">puts</span> <span class="string">"#{</span><span class="parameter">greeting</span>.<span class="function">capitalize</span><span class="string">}, #{</span><span class="className">@name</span><span class="string">}!"</span>
+                <span class="keyword">end</span>
+              <span class="keyword">end</span>
+            <span class="keyword">end</span>
+
+            <span class="className">Person</span>.<span class="function">add_greeting</span>(<span class="string">:hello</span>)
+            <span class="parameter">person</span> <span class="keyword">=</span> <span class="className">Person</span>.<span class="keyword">new</span>(<span class="string">"Bob"</span>)
+            <span class="parameter">person</span>.<span class="function">hello</span>  <span class="comment"># Output: Hello, Bob!</span>
+          </code>
+        </pre>
+
+        <h3>Extensive Standard Library</h3>
+        <p>
+          Ruby comes with an extensive set of libraries for handling common tasks
+          like file I/O, string manipulation, regular expressions, and more, so 
+          you can easily get started without worrying about building your own tools.
+        </p>
+        <h3>Open Classes</h3>
+        <p>
+          Ruby allows classes to be modified or extended at runtime. This functionality 
+          can be useful and dangerous at the same time so it is best to proceed with 
+          caution when using it or to avoid it all together. If used, it is important 
+          be certain that method names do not conflict with pre-existing, or future 
+          names. Overuse of open classes encourages poor design so it is preferred to 
+          follow best practices in order to avoid using them.
+        </p>
+        <h3>Exception Handling</h3>
+        <p>
+          Ruby handles exceptions using an easy to understand error handling system 
+          that uses 'begin', 'rescue', and 'ensure' blocks.
+        </p>
+        <pre>
+          <code>
+            <span class="keyword">begin</span>
+              <span class="integer">10</span> <span class="keyword">/</span> <span class="integer">0</span>
+            <span class="keyword">rescue</span> <span class="className">ZeroDivisionError</span> <span class="keyword">=></span> <span class="parameter">e</span>
+              <span class="function">puts</span> <span class="string">"Error: #{</span><span class="parameter">e</span>.<span class="function">message</span><span class="string">}"</span>  <span class="comment"># Output: Error: divided by 0</span>
+            <span class="keyword">ensure</span>
+              <span class="function">puts</span> <span class="string">"This always runs."</span>
+            <span class="keyword">end</span>
+          </code>
+        </pre>
+
+        <h3>Ecosystem</h3>
+        <p>
+          Ruby still has an active community with a large collection of
+          Gems (Ruby Libraries) that can help you add various functions to 
+          your programs with ease.
+        </p>
+        <h3>Frameworks</h3>
+        <p>
+          Ruby's most popular framework, Ruby on Rails, is designed to simplify
+          the development of web applications. The philosophy behind Rails is Don't 
+          Repeat Yourself and Convention Over Configuration. In addition to this, Rails 
+          allows for rapid prototyping thanks to its application generator. Rails was once 
+          the go-to framework for web development but has fallen in popularity due to the success
+          of other frameworks and technologies, however, it is still widely used and many 
+          apps are built on Rails. Below is a simple example of how to generate a new 
+          Ruby on Rails site.
+        </p>
+        <pre>
+          <code>
+            <span class="comment"># 1. Create a new Rails application</span>
+            <span class="command">rails new my_rails_app</span>
+            
+            <span class="comment"># Navigate into the application directory</span>
+            <span class="command">cd my_rails_app</span>
+
+            <span class="comment"># 2. Run the Rails server to check the app (default port: 3000)</span>
+            <span class="command">rails server</span>
+            
+            <span class="comment"># Access the app in your browser: http://localhost:3000</span>
+            
+            <span class="comment"># Stop the server (Ctrl+C) before generating resources</span>
+
+            <span class="comment"># 3. Generate a scaffold for an Article resource</span>
+            <span class="command">rails generate scaffold Article title:string body:text</span>
+
+            <span class="comment"># This will create:</span>
+            <span class="comment"># - Model (app/models/article.rb)</span>
+            <span class="comment"># - Controller (app/controllers/articles_controller.rb)</span>
+            <span class="comment"># - Views (app/views/articles/)</span>
+            <span class="comment"># - Database migration (db/migrate/TIMESTAMP_create_articles.rb)</span>
+            <span class="comment"># - Routes (config/routes.rb)</span>
+
+            <span class="comment"># 4. Apply database migrations to update the schema</span>
+            <span class="command">rails db:migrate</span>
+
+            <span class="comment"># 5. Start the Rails server again</span>
+            <span class="command">rails server</span>
+
+            <span class="comment"># Visit the Articles resource at http://localhost:3000/articles</span>
+          </code>
+        </pre>
       </section>
 
 
